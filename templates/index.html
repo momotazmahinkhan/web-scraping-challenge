@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>All About Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Visit Planet Mars...</h1>
+      <p>News. Info. Images. Tweets. Hemisphere.</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+    </div>
+    <h2>It's all in the news:</h2>
+  </div>
+  </div>
+  <div class="container-fluid">
+    <h3>Twitter: {{ news.Tweet }}</h3>
+  </div>
+  <div class="container-fluid">
+    <h3>Headline: {{ news.News.news_headline }}</h3>
+    <h3>News: {{ news.News.news_para }}</h3>    
+  </div>
+  <div class="container-fluid">
+    <img src="{{ news.Image}}"width="40%">
+  </div>
+  <div class="container-fluid">
+    <h3>Table: {{ news.Table | safe}}</h3>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="column">
+        <div>
+          <p> {{ news.Hemisphere[0].title}} </p>
+            <img src= {{ news.Hemisphere[0].img_url }} width="20%" >
+        </div>
+        <div>
+          <p> {{ news.Hemisphere[1].title}} </p>
+            <img src= {{ news.Hemisphere[1].img_url }} width="20%" >
+        </div>
+        <div>
+          <p> {{ news.Hemisphere[2].title}} </p>
+            <img src= {{ news.Hemisphere[2].img_url }} width="20%" >
+        </div>
+        <div>
+          <p> {{ news.Hemisphere[3].title}} </p>
+            <img src= {{ news.Hemisphere[3].img_url }} width="20%" >
+        </div>
+      </div>
+    </div>
+  </div>d
+</body>
+
+</html>
+
+<!-- <div class="row">
+  <div class="column">
+    <img src="img_snow.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="img_forest.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div> -->
